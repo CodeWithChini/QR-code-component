@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --page-bg: #d6e1f0;
+  --card-bg: #ffffff;
+  --heading-color: #1f314f;
+  --text-color: #7d889e;
+
+  --card-radius: 1rem;
+  --image-radius: 0.75rem;
+  --card-padding: 1rem;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +18,7 @@
 }
 
 body{
-    background-color: #D6E1F0;
+    background-color: var(--page-bg);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,11 +26,11 @@ body{
 }
 
 .container{
+    background-color: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
     max-width: 20.25rem;
     height:32.25rem ;
-    background-color: white;
-    border-radius: 1rem;
-    padding: 0.875rem;
     align-items: center;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -31,8 +42,9 @@ body{
 }
 
 .content h1{
+    color: var(--heading-color);
     font-family: 'Outfit', sans-serif;
-    font-size: 1.28rem;
+    font-size: clamp(1.25rem, 2vw, 1.4rem);
     padding: 1rem 1rem;
     text-align: center;
 }
@@ -40,7 +52,7 @@ body{
 .content p{
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
-    color: #999393;
+    color: var(--text-color);
     font-weight: 400;
     padding: 0.625rem 1.25rem;
     text-align: center;
